@@ -1,0 +1,109 @@
+/*Following code adjust the title and the line underneath it*/
+header {
+	padding: 3em;
+	color: #A26769;
+	font-family: "Raleway", sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	margin-top:50px;
+}
+hr {
+    height: 0;
+    overflow: visible;
+    margin-bottom: 50px;
+}
+.middle {
+	padding:1em;
+	position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 1000px;
+    padding-bottom: 2em;
+}
+
+/*These are general adjustments for the entire page*/
+body{
+	background-image: url(http://cdn.pcwallart.com/images/dark-abstract-1920x1080-wallpaper-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	color:#FCF6E7;
+    /* Set a specific height */
+    height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*This is the positioning of the login and search (.nav) 
+adjustment of their buttons, searchfield and labels */
+.nav {
+	float: right;
+	max-width: 300px;
+	padding: 1em;
+	margin: 0;
+	text-align: left;
+}
+label {
+	font-size: 20px;
+	text-align: left;
+}
+input[type="button"] {
+    background-color: #FCF6E7; /* Green */
+    border: 1px solid white;
+    margin: auto;
+    color: #2B2B2B;
+    padding: 8px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+input[type="button"]:hover {
+	background:#582630;
+}
+input[type="search"]{
+	width: 235px;
+	min-height: 30px;
+	font-size: 16px;
+}
+section form{
+	padding: 1em;
+}
+
+/*This is the intrdouction text*/
+.intro {
+	margin: auto;
+	max-width: 800px;
+	padding: 1em;
+	text-align: center;
+}
+
+/*These adjustments are for the table*/
+table {
+	background: rgba(147, 130, 127, 0.3); 
+	margin:2em;
+	padding:2em;
+	padding-left: 10em;
+	padding-right: 10em;
+	max-width: 1000px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+td {
+	min-width: 300px;
+	vertical-align: center;
+	text-align: center; 
+}
+td:nth-of-type(2) {
+	font-size: 30px;
+	text-transform: capitalize;
+}
+
+img {
+	border:1px solid black;
+}
