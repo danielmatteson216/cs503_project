@@ -9,14 +9,14 @@
     </style>
 </head>
 <body>
-<article id="content">
+<div>
 
     <h1> CS503 Final Project Register Page </h1>
 
     <table border="0">
         <tr>
             <td>Name</td>
-            <td align="center"><input type="text" name="Name" size="30" /></td>
+            <td align="center"><input type="text" name="name" size="30" /></td>
         </tr>
         <tr>
             <td>Username</td>
@@ -28,7 +28,7 @@
         </tr>
         <tr>
         <td>Sex</td>
-        <td align="center"><select id="sex" name="Sex">
+        <td align="center"><select id="sex" name="sex">
             <option value="0">--Select Sex---</option>
             <option value="M">M</option>
             <option value="F">F</option>
@@ -37,38 +37,9 @@
         </tr>
     </table>
 
-    <form action="cs503FinalProject_php.php" method="post">
+    <form action="processUser.php" method="POST">
       <input type="submit" value="Submit"/>
     </form>
-
-    <div>
-        <?php
-        echo $_POST["name"];
-        //Connect to the database (server, username, password, database)
-        // $conn=mysqli_connect('localhost', 'root', 'password', 'db_project') or die ("can't connect to mysql");
-
-        // //initialize variables
-        // $htmlout= array();
-        // $columns= 3;
-
-        // //retrieve data from sql
-        // $sql="INSERT INTO Participant VALUES ()";
-        // $result= $conn->query($sql);
-        // while($row = $result->fetch_assoc()){
-        //     $htmlout[]="<tr id='{$row['name']}'> <td> <img heigth='500px' width='300px' src='{$row['url']}' alt='' /></td> <td> {$row['name']}</td> <td>{$row['description']} </td></tr>";
-        // }
-        // $htmlout=array_chunk($htmlout, $columns);
-
-        // //display table
-        // print '<table>';
-        // foreach ($htmlout as $current_row) {
-        //     print  implode(' ', $current_row);
-        // }
-
-        mysqli_close($conn);    
-        ?>
-    </div>
-
-</article>
+</div>
 </body>
 </html>
