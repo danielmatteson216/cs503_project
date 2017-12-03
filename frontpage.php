@@ -33,6 +33,11 @@
 			<input type="button" value="login" onclick="window.location.href='cs503_html.html'">
 		</label>
 	</form>
+	<form action="addCostumes.php" method="POST" >
+		<label> Add your own costume: <br>
+			<input type="submit" value="Add costume">
+		</label>
+	</form>
 	<form action="search.php" method="GET">
 		<label>Let's find some inspiration<br>
 		<input name="input" type="search" placeholder="search"><br>
