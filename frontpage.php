@@ -45,17 +45,17 @@
 	<div>
 		<?php
 		//Connect to the database (server, username, password, database)
-		$conn=mysqli_connect('localhost', 'root', 'password', 'db_project') or die ("can't connect to mysql");
+		$conn=mysqli_connect('localhost', 'root', '1234', 'CostumeConvention') or die ("can't connect to mysql");
 
 		//initialize variables
 		$htmlout= array();
-		$columns= 3;
+		$columns= 4;
 
 		//retrieve data from sql
-		$sql="SELECT name, url, description FROM furr_table ORDER BY name";
+		$sql="SELECT Cname, URL, CostumeCondition, Description FROM Costumes ORDER BY Cname";
 		$result= $conn->query($sql);
 		while($row = $result->fetch_assoc()){
-			$htmlout[]="<tr id='{$row['name']}'> <td> <img heigth='500px' width='300px' src='{$row['url']}' alt='' /></td> <td> {$row['name']}</td> <td>{$row['description']} </td></tr>";
+			$htmlout[]="<tr id='{$row['Cname']}'> <td> <img heigth='500px' width='300px' src='{$row['URL']}' alt='' /></td> <td> {$row['Cname']}</td><td> {$row['CostumeCondition']}</td> <td>{$row['Description']} </td></tr>";
 		}
 		$htmlout=array_chunk($htmlout, $columns);
 
