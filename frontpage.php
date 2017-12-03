@@ -30,7 +30,7 @@
 <section class="nav">
 	<form >
 		<label> Click here to log in: <br>
-			<input type="button" value="login" onclick="window.location.href='/login.php'">
+			<input type="button" value="login" onclick="window.location.href='cs503_html.php'">
 		</label>
 	</form>
 	<form action="search.php" method="GET">
