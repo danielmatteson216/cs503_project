@@ -45,14 +45,15 @@
 	<div>
 		<?php
 		//Connect to the database (server, username, password, database)
-		$conn=mysqli_connect('localhost', 'root', '1234', 'CostumeConvention') or die ("can't connect to mysql");
+		$conn=mysqli_connect('localhost', 'root', '1234', 'CostumeConvention'); //or die ("can't connect to mysql");
+		echo mysqli_error($conn);
 
 		//initialize variables
 		$htmlout= array();
-		$columns= 4;
+		$columns= ;
 
 		//retrieve data from sql
-		$sql="SELECT Cname, URL, CostumeCondition, Description FROM Costumes ORDER BY Cname";
+		$sql="SELECT * FROM Costumes ORDER BY Cname";
 		$result= $conn->query($sql);
 		while($row = $result->fetch_assoc()){
 			$htmlout[]="<tr id='{$row['Cname']}'> <td> <img heigth='500px' width='300px' src='{$row['URL']}' alt='' /></td> <td> {$row['Cname']}</td><td> {$row['CostumeCondition']}</td> <td>{$row['Description']} </td></tr>";
