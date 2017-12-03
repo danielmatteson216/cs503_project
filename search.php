@@ -21,7 +21,7 @@
 	$input = htmlspecialchars($input); 
 	$input = mysqli_real_escape_string($conn, $input);
 
-	$sql = "SELECT name, url, description FROM furr_table WHERE name LIKE '$input' ";
+	$sql = "SELECT name, url, description FROM furr_table WHERE name LIKE '%$input%' ";
 	$result= $conn->query($sql);
 	$rows = mysqli_num_rows($result);
 	if($rows > 0){
