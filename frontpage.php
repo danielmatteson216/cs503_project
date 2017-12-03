@@ -33,10 +33,10 @@
 			<input type="button" value="login" onclick="window.location.href='/login.php'">
 		</label>
 	</form>
-	<form action="" method="get">
+	<form action="search.php" method="GET">
 		<label>Let's find some inspiration<br>
-		<input name="searchstring" type="search" placeholder="search"><br>
-		<input type="button" value="Search" formaction='frontpage.php#'+'searchstring'></label>
+		<input name="input" type="search" placeholder="search"><br>
+		<input type="submit" value="search"></label>
 	</form>
 </section>
 
