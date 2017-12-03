@@ -21,21 +21,22 @@
 	$input = htmlspecialchars($input); 
 	$input = mysqli_real_escape_string($conn, $input);
 
+	//Get data form database, display in a html-table
 	$sql = "SELECT name, url, description FROM furr_table WHERE name LIKE '%$input%' ";
 	$result= $conn->query($sql);
 	$rows = mysqli_num_rows($result);
 	if($rows > 0){
+		//build table entries
+		while($row = $result->fetch_assoc()){
+			$htmlout[]="<tr id='{$row['name']}'> <td> <img heigth='500px' width='300px' src='{$row['url']}' alt='' /></td> <td> {$row['name']}</td> <td>{$row['description']} </td></tr>";
+		}
+		$htmlout=array_chunk($htmlout, $columns);
 
-			while($row = $result->fetch_assoc()){
-				$htmlout[]="<tr id='{$row['name']}'> <td> <img heigth='500px' width='300px' src='{$row['url']}' alt='' /></td> <td> {$row['name']}</td> <td>{$row['description']} </td></tr>";
-			}
-			$htmlout=array_chunk($htmlout, $columns);
-
-			//display table
-			print '<table>';
-			foreach ($htmlout as $current_row) {
-				print  implode(' ', $current_row);
-			}
+		//display table
+		print '<table>';
+		foreach ($htmlout as $current_row) {
+			print  implode(' ', $current_row);
+		}
 	}
 	else{
 		echo "No results found";
