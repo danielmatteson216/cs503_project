@@ -33,11 +33,6 @@
 			<input type="button" value="login" onclick="window.location.href='cs503_html.html'">
 		</label>
 	</form>
-	<form action="addCostumes.php" method="POST" >
-		<label> Add your own costume: <br>
-			<input type="submit" value="Add costume">
-		</label>
-	</form>
 	<form action="search.php" method="GET">
 		<label>Let's find some inspiration<br>
 		<input name="input" type="search" placeholder="search"><br>
@@ -50,14 +45,15 @@
 	<div>
 		<?php
 		//Connect to the database (server, username, password, database)
-		$conn=mysqli_connect('localhost', 'root', '1234', 'CostumeConvention') or die ("can't connect to mysql");
+		$conn=mysqli_connect('localhost', 'root', '1234', 'CostumeConvention'); //or die ("can't connect to mysql");
+		echo mysqli_error($conn);
 
 		//initialize variables
 		$htmlout= array();
-		$columns= 4;
+		$columns= ;
 
 		//retrieve data from sql
-		$sql="SELECT Cname, URL, CostumeCondition, Description FROM Costumes ORDER BY Cname";
+		$sql="SELECT * FROM Costumes ORDER BY Cname";
 		$result= $conn->query($sql);
 		while($row = $result->fetch_assoc()){
 			$htmlout[]="<tr id='{$row['Cname']}'> <td> <img heigth='500px' width='300px' src='{$row['URL']}' alt='' /></td> <td> {$row['Cname']}</td><td> {$row['CostumeCondition']}</td> <td>{$row['Description']} </td></tr>";
