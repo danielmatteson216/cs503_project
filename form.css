@@ -1,0 +1,60 @@
+
+body{
+	background-image: url(http://cdn.pcwallart.com/images/dark-abstract-1920x1080-wallpaper-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	color:#FCF6E7;
+    /* Set a specific height */
+    height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+form {
+	margin:0 auto;
+	margin-top: 3em;
+	width:500px;
+	display: block;
+	text-align: left;
+
+}
+label {
+	font-size: 20px;
+}
+input[type="button"], input[type="submit"] {
+    background-color: #FCF6E7; 
+    border: 1px solid white;
+    margin: auto;
+    color: #2B2B2B;
+    padding: 8px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+input[type="button"]:hover, input[type="submit"]:hover {
+	background:#582630;
+}
+input[type="search"], input[type="text"]{
+	width: 500px;
+	min-height: 30px;
+	font-size: 16px;
+	font-style: italic;
+	margin-top:0px;
+	margin-bottom: 2em;
+}
+a {
+	margin-top: 2em;
+	font-size: 30px;
+	color:#FCF6E7;
+	text-decoration: none;
+}
+a:hover{
+	color:#582630;	
+	text-decoration: none;
+}
+
