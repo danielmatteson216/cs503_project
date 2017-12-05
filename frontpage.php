@@ -50,7 +50,7 @@
 
 		//initialize variables
 		$htmlout= array();
-		$columns= ;
+		$columns= 4;
 
 		//retrieve data from sql
 		$sql="SELECT * FROM Costumes ORDER BY Cname";
