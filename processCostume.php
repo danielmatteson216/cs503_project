@@ -13,7 +13,7 @@
 	$description = mysqli_real_escape_string($conn, $description);
 
 
-	$sql="INSERT INTO furr_table (Cname, CostumeCondition, URL, Description)
+	$sql="INSERT INTO COSTUMES (Cname, CurrentCondition, URL, Description)
 			VALUES ('$name','$condition','$url','$description')";
 
 	$returnval=$conn->query($sql);

@@ -39,7 +39,10 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
-/*This is the positioning of the login and search (.nav) 
+p{
+	text-align:center;
+}
+/*This is the positioning of the add costumes and search (.nav) 
 adjustment of their buttons, searchfield and labels */
 .nav {
 	float: right;
@@ -100,18 +103,15 @@ table {
 	padding:2em;
 	padding-left: 10em;
 	padding-right: 10em;
-	max-width: 1000px;
+	max-width: 1500px;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
 td {
 	min-width: 300px;
+	max-width: 300px;
 	vertical-align: center;
 	text-align: center; 
-}
-td:nth-of-type(2) {
-	font-size: 30px;
-	text-transform: capitalize;
 }
 
 img {

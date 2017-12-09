@@ -14,10 +14,19 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+h1 {text-align: center;}
 form {
 	margin:0 auto;
 	margin-top: 3em;
 	width:500px;
+	display: block;
+	text-align: left;
+
+}
+table {
+	margin:0 auto;
+	margin-top: 3em;
+	width:700px;
 	display: block;
 	text-align: left;
 
@@ -39,7 +48,7 @@ input[type="button"], input[type="submit"] {
 input[type="button"]:hover, input[type="submit"]:hover {
 	background:#582630;
 }
-input[type="search"], input[type="text"]{
+input[type="search"], input[type="text"], input[type="password"]{
 	width: 500px;
 	min-height: 30px;
 	font-size: 16px;
